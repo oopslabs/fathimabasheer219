@@ -1,0 +1,29 @@
+import java.io.File;
+import java.util.*;
+public class file {
+	public static void main(String []args)
+	{
+		File f=new File("C:\\Users\\sun\\OneDrive\\Desktop\\faima");
+		String[] l=f.list();
+		boolean flag=false;
+		for(String x:l) {
+			System.out.println(x);
+		}
+	System.out.println("enter the name of the file to be searched:");
+	Scanner s=new Scanner(System.in);
+	String check=s.nextLine();
+	for(String x:l) {
+		if(x.equals(check)) {
+			flag=true;
+		}
+	}
+		if(flag)
+		{
+			System.out.println("found");
+		}
+		else {
+			System.out.println("not found");
+		}
+	}
+
+}

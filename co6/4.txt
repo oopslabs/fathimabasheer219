@@ -1,0 +1,27 @@
+import java.io.*;
+
+import java.io.IOException;
+
+public class copy_evnod {
+public static void main(String args[]) throws IOException
+{
+FileReader fr = new 
+FileReader("C:\\Users\\sun\\OneDrive\\Desktop\\faima\\main.txt");
+FileWriter fw1 = new 
+FileWriter("C:\\Users\\sun\\OneDrive\\Desktop\\faima\\even.txt",true);
+FileWriter fw2 = new 
+FileWriter("C:\\Users\\sun\\OneDrive\\Desktop\\faima\\odd.txt",true);
+System.out.println("\nFrom the file integers.txt Odd Numbers are copied to odd.tx tfile and Even numbers are copied to even.txt file\n");
+int i;
+while((i=fr.read()) != -1)
+{
+if(i%2==0)
+fw1.write(i);
+else
+fw2.write(i);
+}
+fr.close();
+fw1.close();
+fw2.close();
+}
+}
